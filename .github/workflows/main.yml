@@ -24,3 +24,6 @@ jobs:
 
     - name: Push Docker image to Docker Hub
       run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/gui-ftp:latest
+
+    - name: Add Username and Password
+      run: docker run -d --name ftp-test -p 21:21 -p 30000-30009:30000-30009 -e FTP_USER_NAME=wla -e FTP_USER_PASS=wla123 -e FTP_USER_HOME=/home/test -v C:/pyftp:/home/test stilliard/pure-ftpd:hardened
