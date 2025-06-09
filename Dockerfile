@@ -14,3 +14,4 @@ RUN mkdir -p /app/valid_files /app/error_logs
 COPY . .
 
 CMD ["python", "Testfile10.py"]
+# TEST
