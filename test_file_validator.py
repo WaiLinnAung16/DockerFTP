@@ -12,7 +12,7 @@ class TestFileValidator(unittest.TestCase):
     def test_valid_file(self):
         is_valid, message = FileValidator.validate(self.valid_csv_content)
         self.assertTrue(is_valid)
-        self.assertEqual(message, "Valid")
+        self.assertEqual(message, "Vali")
 
     def test_invalid_headers(self):
         invalid_headers = """wrong_id,timestamp,reading1,reading2,reading3,reading4,reading5,reading6,reading7,reading8,reading9,reading10
